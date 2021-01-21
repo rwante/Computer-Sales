@@ -1,0 +1,64 @@
+<h4>Yeni Ürün Ekle</h4>
+
+<form #ssdAddForm="ngForm" (ngSubmit)="add(ssdAddForm)">
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Markası" #brand="ngModel" [(ngModel)]="model.brand"
+           class="form-control" name="brand" id="brand" required>
+    <div *ngIf="brand.invalid&&brand.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Ürün Fiyatı" #price="ngModel" [(ngModel)]="model.price"
+           class="form-control" name="price" id="price" required>
+    <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Kapasite" #capacity="ngModel" [(ngModel)]="model.capacity"
+           class="form-control" name="capacity" id="capacity" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="SSD Türü" #type="ngModel" [(ngModel)]="model.type"
+           class="form-control" name="type" id="type" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Bağlantı Arayüzü" #accessInterface="ngModel" [(ngModel)]="model.accessInterface"
+           class="form-control" name="accessInterface" id="accessInterface" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Çip" #chip="ngModel" [(ngModel)]="model.chip"
+           class="form-control" name="chip" id="chip" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Max Okuma Hızı" #maxReadingSpeed="ngModel" [(ngModel)]="model.maxReadingSpeed"
+           class="form-control" name="maxReadingSpeed" id="maxReadingSpeed" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Max Yazma Hızı" #maxWritingSpeed="ngModel" [(ngModel)]="model.maxWritingSpeed"
+           class="form-control" name="maxWritingSpeed" id="maxWritingSpeed" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Kodu" #productCode="ngModel" [(ngModel)]="model.productCode"
+           class="form-control" name="productCode" id="productCode" required>
+    <div *ngIf="productCode.invalid&&productCode.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="StockId">Stok Sayısı:</label>
+    <select class="form-control" #StockId="ngModel" [(ngModel)]="model.stockId" required
+            id="StockId" name="StockId">
+      <option *ngFor="let stock of modelStock" [value]="stock.id">{{stock.productAmount}}</option>
+    </select>
+    <div *ngIf="StockId.invalid&&StockId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ürün Ekle</button>
+</form>
+
+

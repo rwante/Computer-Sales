@@ -1,0 +1,140 @@
+<h4>Yeni Ürün Ekle</h4>
+
+<form #laptopAddForm="ngForm" (ngSubmit)="add(laptopAddForm)">
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Markası" #brand="ngModel" [(ngModel)]="model.brand"
+           class="form-control" name="brand" id="brand" required>
+    <div *ngIf="brand.invalid&&brand.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Ürün Fiyatı" #price="ngModel" [(ngModel)]="model.price"
+           class="form-control" name="price" id="price" required>
+    <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Disk Devir Hızı" #diskRotationSpeed="ngModel" [(ngModel)]="model.diskRotationSpeed"
+           class="form-control" name="diskRotationSpeed" id="diskRotationSpeed" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Bluetooth" #bluetooth="ngModel" [(ngModel)]="model.bluetooth"
+           class="form-control" name="bluetooth" id="bluetooth" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Wireless" #wireless="ngModel" [(ngModel)]="model.wireless"
+           class="form-control" name="wireless" id="wireless" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="İşletim Sistemi" #operatingSystem="ngModel" [(ngModel)]="model.operatingSystem"
+           class="form-control" name="operatingSystem" id="operatingSystem" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Kodu" #productCode="ngModel" [(ngModel)]="model.productCode"
+           class="form-control" name="productCode" id="productCode" required>
+    <div *ngIf="productCode.invalid&&productCode.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="hdmi">HDMI:</label>
+    <select class="form-control" #hdmi="ngModel" [(ngModel)]="model.hdmi" id="hdmi" [ngModelOptions]="{standalone: true}">
+      <option [value]=true >Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="camera">Kamera:</label>
+    <select class="form-control"  #camera="ngModel" [(ngModel)]="model.camera" id="camera" [ngModelOptions]="{standalone: true}">
+      <option [value]=true>Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="ethernet">Ethernet:</label>
+    <select class="form-control"  #ethernet="ngModel" [(ngModel)]="model.ethernet" id="ethernet" [ngModelOptions]="{standalone: true}">
+      <option [value]=true>Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="touchpad">Touchpad:</label>
+    <select class="form-control"  #touchpad="ngModel" [(ngModel)]="model.touchpad" id="touchpad" [ngModelOptions]="{standalone: true}">
+      <option [value]=true>Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="laptopScreenId">Ekran:</label>
+    <select class="form-control" #laptopScreenId="ngModel" [(ngModel)]="model.laptopScreenId" required
+            id="laptopScreenId" name="laptopScreenId">
+      <option *ngFor="let screen of modelScreen" [value]="screen.id">Boyut/Çözünürlük: {{screen.screenSize}} / {{screen.screenResolution}}</option>
+    </select>
+    <div *ngIf="laptopScreenId.invalid&&laptopScreenId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="laptopSSDId">SSD:</label>
+    <select class="form-control" #laptopSSDId="ngModel" [(ngModel)]="model.laptopSSDId" required
+            id="laptopSSDId" name="laptopSSDId">
+      <option *ngFor="let ssd of modelSsd" [value]="ssd.id">SSD/Kapasite: {{ssd.ssd}} / {{ssd.ssdCapacity}}</option>
+    </select>
+    <div *ngIf="laptopSSDId.invalid&&laptopSSDId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="laptopHDDId">HDD:</label>
+    <select class="form-control" #laptopHDDId="ngModel" [(ngModel)]="model.laptopHDDId" required
+            id="laptopHDDId" name="laptopHDDId">
+      <option *ngFor="let hdd of modelHdd" [value]="hdd.id">HDD/Kapasite: {{hdd.hdd}} / {{hdd.hddCapacity}}</option>
+    </select>
+    <div *ngIf="laptopHDDId.invalid&&laptopHDDId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="laptopGPUId">GPU:</label>
+    <select class="form-control" #laptopGPUId="ngModel" [(ngModel)]="model.laptopGPUId" required
+            id="laptopGPUId" name="laptopGPUId">
+      <option *ngFor="let gpu of modelGpu" [value]="gpu.id">Üretici/Model/Seri/RAM Paylaşımı/RAM: {{gpu.gpuProducer}} / {{gpu.gpuModel}} / {{gpu.gpuSerial}} / {{gpu.gpuRamSharing}} / {{gpu.gpuRam}}</option>
+    </select>
+    <div *ngIf="laptopGPUId.invalid&&laptopGPUId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="laptopProcessorId">İşlemci:</label>
+    <select class="form-control" #laptopProcessorId="ngModel" [(ngModel)]="model.laptopProcessorId" required
+            id="laptopProcessorId" name="laptopProcessorId">
+      <option *ngFor="let processor of modelProcessor" [value]="processor.id">Seri/Model: {{processor.processorSerial}} / {{processor.processorModel}}</option>
+    </select>
+    <div *ngIf="laptopProcessorId.invalid&&laptopProcessorId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="laptopRAMId">RAM:</label>
+    <select class="form-control" #laptopRAMId="ngModel" [(ngModel)]="model.laptopRAMId" required
+            id="laptopRAMId" name="laptopRAMId">
+      <option *ngFor="let ram of modelRam" [value]="ram.id">RAM/Tür/Hız: {{ram.ram}} / {{ram.ramType}} / {{ram.ramSpeed}}</option>
+    </select>
+    <div *ngIf="laptopRAMId.invalid&&laptopRAMId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="StockId">Stok Sayısı:</label>
+    <select class="form-control" #StockId="ngModel" [(ngModel)]="model.stockId" required
+            id="StockId" name="StockId">
+      <option *ngFor="let stock of modelStock" [value]="stock.id">{{stock.productAmount}}</option>
+    </select>
+    <div *ngIf="StockId.invalid&&StockId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ürün Ekle</button>
+</form>
+
+

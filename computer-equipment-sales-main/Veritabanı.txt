@@ -1,0 +1,518 @@
+ComputerCase
+{
+  "brand": "POWER BOOST",
+  "pointScoring": 4,
+  "productCode": "VK-C013B",
+  "price": 514.18,
+  "audio": true,
+  "caseType": "ATX Mid Tower",
+  "fan": true,
+  "frontOutputs": "2 x USB2.0 , 1 x USB3.0,Mikrofon , Kulaklık",
+  "mainboardSupport": null,
+  "material": null,
+  "size": "ATX Mid Tower",
+  "transparentCase": true,
+  "computerCasePsuId": 1,
+  "stockId": 1
+}
+****************************************************************************************
+{
+  "brand": "CORSAIR",
+  "pointScoring": 5,
+  "productCode": "CC-9020124-EU",
+  "price": 1047.96,
+  "audio": true,
+  "caseType": "ATX Mid Tower",
+  "fan": true,
+  "frontOutputs": "USB 3.0 x 2",
+  "mainboardSupport": null,
+  "material": "Çelik, Temperli Cam",
+  "size": "ATX Mid Tower",
+  "transparentCase": true,
+  "computerCasePsuId": 2,
+  "stockId": 2
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+DisplayCard
+{
+  "brand": "MSI",
+  "pointScoring": 5,
+  "productCode": "RX 580 ARMOR 8G OC",
+  "price": 2278.38, 
+  "producer": "AMD",
+  "maxCoreSpeed": "1366MHz",
+  "cudaAmount": null,
+  "openGL": "OpenGL 4.5",
+  "directX": "DirectX 12.1",
+  "hdmi": "2 x HDMI 2.0b",
+  "displayPort": "2 x DisplayPort 1.4",
+  "maxResolution": "7680 x 4320",
+  "sliSupport": false,
+  "coolingFan": "Aktif Soğutma",
+  "slot": 2,
+  "hdcpReady": true,
+  "displayCardGPU": 1,
+  "displayCardMemory": 1,
+  "stock": 3
+}
+****************************************************************
+{
+  "brand": "MSI",
+  "pointScoring": 5,
+  "productCode": "GTX 1050 TI GAMING X 4G",
+  "price": 1675.56,
+  "producer": "NVIDIA",
+  "maxCoreSpeed": "1468 MHz",
+  "cudaAmount": 768,
+  "openGL": "OpenGL 4.5",
+  "directX": "DirectX 12",
+  "hdmi": "1 x HDMI 2.0",
+  "displayPort": "1 x DisplayPort 1.4",
+  "maxResolution": "7680 x 4320",
+  "sliSupport": false,
+  "coolingFan": "Aktif Soğutma",
+  "slot": 2,
+  "hdcpReady": true,
+  "displayCardGPU": 2,
+  "displayCardMemory": 2,
+  "stock": 4
+}
+///////////////////////////////////////////////////////////////////////////
+HDD
+{
+  "brand": "SEAGATE",
+  "pointScoring": 5,
+  "productCode": "ST1000DM010",
+  "price": 372.17,
+  "accessType": "SATA 6.0Gb/s",
+  "cacheMemory": "64MB",
+  "diskSize": "3.5",
+  "diskType": "Standart",
+  "rotationSpeed": "7200 RPM",
+  "thickness": null,
+  "capacity": "1TB",
+  "stock": 5
+}
+**************************************************************************
+{
+  "brand": "WD",
+  "pointScoring": 5,
+  "productCode": "WD10EZEX",
+  "price": 372.17,
+  "accessType": "SATA 6.0Gb/s",
+  "cacheMemory": "64MB",
+  "diskSize": "3.5",
+  "diskType": "Standart",
+  "rotationSpeed": "7200Rpm",
+  "thickness": null,
+  "capacity": "1TB",
+  "stock": 6
+}
+/////////////////////////////////////////////////////////////////////////
+Laptop
+{
+  "brand": "MSI",
+  "pointScoring": 3,
+  "productCode": "GE75 RAIDER 10SFS-404XTR",
+  "price": 25974.09,
+  "diskRotationSpeed": null,
+  "hdmi": true,
+  "camera": true,
+  "bluetooth": "Bluetooth v5.0",
+  "wireless": null,
+  "ethernet": true,
+  "touchpad": true,
+  "operatingSystem": "FreeDos",
+  "laptopScreen": 1,
+  "laptopSSD": 1,
+  "laptopHDD": 1,
+  "laptopGPU": 1,
+  "laptopProcessor": 1,
+  "laptopRAM": 1,
+  "stock": 7  
+}
+********************************************************
+{
+  "brand": "MSI",
+  "pointScoring": 2,
+  "productCode": "PRESTIGE 15 A11SCS-035TR",
+  "price": 15380.58,
+  "diskRotationSpeed": null,
+  "hdmi": true,
+  "camera": true,
+  "bluetooth": "Bluetooth v5.1",
+  "wireless": null,
+  "ethernet": false,
+  "touchpad": true,
+  "operatingSystem": "Windows 10 Home",
+  "laptopScreen": 2,
+  "laptopSSD": 2,
+  "laptopHDD": 2,
+  "laptopGPU": 2,
+  "laptopProcessor": 2,
+  "laptopRAM": 2,
+  "stock": 8  
+}
+////////////////////////////////////////////////////////
+Mainboard
+{
+  "brand": "GIGABYTE",
+  "pointScoring": 5,
+  "productCode": "B450M S2H",
+  "price": 569.00,
+  "chipset": "AMD B450",
+  "compatibleProcessors": "Ryzen 7, 5, 3 (Soket AM4)",
+  "soundChip": "Realtek ALC887",
+  "soundChannelAmount": "7.1 Kanal",
+  "hdmi": true,
+  "mainboardRam": 1,
+  "stock": 9
+}
+********************************************************
+{
+  "brand": "ASUS",
+  "pointScoring": 1,
+  "productCode": "PRIME A320M-R-SI",
+  "price": 628.07,
+  "chipset": "AMD A320",
+  "compatibleProcessors": "Ryzen 7, 5, 3 (Soket AM4)",
+  "soundChip": "Realtek ALC887",
+  "soundChannelAmount": "5.1 Kanal",
+  "hdmi": true,
+  "mainboardRam": 2,
+  "stock": 10
+}
+////////////////////////////////////////////////////////
+Monitor
+{
+  "brand": "AOC",
+  "pointScoring": 5,
+  "productCode": "C24G2AE",
+  "price": 2164.99,
+  "refreshSpeed": "165 Hz",
+  "hdr": false,
+  "reactionTime": "1ms",
+  "outputs": "2xHDMI, 2xDP, VGA",
+  "MonitorScreen": 1,
+  "stock": 11
+}
+********************************************************
+{
+  "brand": "VIEWSONIC",
+  "pointScoring": 5,
+  "productCode": "VX2458-MHD",
+  "price": 1399.00,
+  "refreshSpeed": "144Hz",
+  "hdr": false,
+  "reactionTime": "1ms",
+  "outputs": "2xHDMI, 1xDP",
+  "MonitorScreen": 2,
+  "stock": 12
+}
+////////////////////////////////////////////////////////
+Processor
+{
+  "brand": "AMD",
+  "pointScoring": 5,
+  "productCode": "Ryzen 5 2600",
+  "price": 1361.37,
+  "processorSocketType": "AM4",
+  "model": "Ryzen 5",
+  "frequencySpeed": "3.4 GHz",
+  "internalGraphic": "Yok",
+  "threadAmount": 12,
+  "cooler": true,
+  "processorType": "Masaüstü İşlemciler",
+  "processorCore": 1,
+  "stock": 13
+}
+********************************************************
+{
+  "brand": "INTEL",
+  "pointScoring": 5,
+  "productCode": "BX80684I59400F",
+  "price": 1383.89,
+  "processorSocketType": "1151 (300 Serisi)",
+  "model": "Core i5",
+  "frequencySpeed": "2.9 GHz",
+  "internalGraphic": "Yok",
+  "threadAmount": 6,
+  "cooler": true,
+  "processorType": "Masaüstü İşlemciler",
+  "processorCore": 2,
+  "stock": 14
+}
+////////////////////////////////////////////////////////
+Ram
+{
+  "brand": "GSKILL",
+  "pointScoring": 1,
+  "productCode": "F4-3200C16D-32GFX",
+  "price": 1447.36,
+  "type": "DDR4",
+  "frequencySpeed": "3200 MHz",
+  "casLatency": "16",
+  "timing": "CL16-18-18-38",
+  "voltage": "1.35V",
+  "color": "Siyah",
+  "capacity": "32GB(2 x 16GB)",
+  "channelType": "Dual Kanal",
+  "ramCompatibility": "Masaüstü RAM",
+  "stock": 15
+}
+********************************************************
+{
+  "brand": "GSKILL",
+  "pointScoring": 2,
+  "productCode": "F4-4000C18D-16GVK",
+  "price": 1229.73,
+  "type": "DDR4",
+  "frequencySpeed": "4000 MHz",
+  "casLatency": "18",
+  "timing": "CL18-22-22-42",
+  "voltage": "1.35V",
+  "color": "Siyah",
+  "capacity": "16GB(2 x 8GB)",
+  "channelType": "Dual Kanal",
+  "ramCompatibility": "Masaüstü Ram",
+  "stock": 16
+}
+////////////////////////////////////////////////////////
+SSD
+{
+  "brand": "XPG",
+  "pointScoring": 3,
+  "productCode": "AGAMMIXS50L-1T-C",
+  "price": 1599.00,
+  "capacity": "1TB",
+  "type": "M.2",
+  "accessInterface": "PCI-Express 4.0 x4",
+  "chip": "TLC",
+  "maxWritingSpeed": "3200 MBps",
+  "stock": 17
+}
+********************************************************
+{
+  "brand": "SEAGATE",
+  "pointScoring": 2,
+  "productCode": "ZA480CV1A001",
+  "price": 495.18,
+  "capacity": "480GB",
+  "type": "2.5",
+  "accessInterface": "SATA 6.0Gb/s",
+  "chip": "TLC",
+  "maxWritingSpeed": "500 MBps",
+  "stock": 18
+}
+////////////////////////////////////////////////////////
+ComputerCasePSU
+{
+  "psu": true,
+  "psuLocation": "Aşağıda",
+  "psuPowerRating": "500W"
+}
+********************************************************
+{
+  "psu": true,
+  "psuLocation": "Aşağıda",
+  "psuPowerRating": "650W"
+}
+////////////////////////////////////////////////////////
+DisplayCardGPU
+{
+  "gpuSerial": "Radeon 500 Serisi",
+  "gpuModel": "Radeon RX 580"
+}
+********************************************************
+{
+  "gpuSerial": "GeForce 1000 Serisi",
+  "gpuModel": "GeForce GTX 1050 Ti"
+}
+////////////////////////////////////////////////////////
+DisplayCardMemory
+{
+  "memoryType": "GDDR5",
+  "memorySpeed": "8000MHz",
+  "memoryCapacity": "8GB",
+  "memoryInterface": "256-Bit"
+}
+********************************************************
+{
+  "memoryType": "GDDR5",
+  "memorySpeed": "7108 MHz",
+  "memoryCapacity": "4GB",
+  "memoryInterface": "128Bit"
+}
+////////////////////////////////////////////////////////
+LaptopGPU
+{
+  "gpuProducer": "Nvidia",
+  "gpuModel": "NVIDIA GeForce RTX 2070 SUPER",
+  "gpuSerial": "GeForce 2000 Serisi",
+  "gpuRamSharing": false,
+  "gpuRam": "8GB"
+}
+********************************************************
+{
+  "gpuProducer": "Nvidia",
+  "gpuModel": "NVIDIA GeForce GTX 1650 Ti",
+  "gpuSerial": "GeForce 1000 Serisi",
+  "gpuRamSharing": false,
+  "gpuRam": "4GB"
+}
+////////////////////////////////////////////////////////
+LaptopHDD
+{
+  "hdd": true,
+  "hddCapacity": "1TB"
+}
+********************************************************
+{
+  "hdd": false,
+  "hddCapacity": null
+}
+////////////////////////////////////////////////////////
+LaptopProcessor
+{
+  "processorSerial": "Intel Core i7",
+  "processorModel": "Core i7 10875H"
+}
+********************************************************
+{
+  "processorSerial": "Intel Core i7",
+  "processorModel": null
+}
+////////////////////////////////////////////////////////
+LaptopRam
+{
+  "ram": "32GB",
+  "ramType": "DDR4",
+  "ramSpeed": "3200 MHz"
+}
+********************************************************
+{
+  "ram": "16GB",
+  "ramType": "DDR4",
+  "ramSpeed": "3200 MHz"
+}
+////////////////////////////////////////////////////////
+LaptopScreen
+{
+  "screenSize": "17.3",
+  "screenResolution": "1920 x 1080"
+}
+********************************************************
+{
+  "screenSize": "15.6",
+  "screenResolution": "1920 x 1080"
+}
+////////////////////////////////////////////////////////
+LaptopSSD
+{
+  "ssd": false,
+  "ssdCapacity": null
+}
+********************************************************
+{
+  "ssd": true,
+  "ssdCapacity": "512GB"
+}
+////////////////////////////////////////////////////////
+MainboardRam
+{
+  "ramSlotAmount": 2,
+  "maxRamSupport": "32GB",
+  "ramType": "DDR4",
+  "ramFrequencySpeed": "3600 MHz, 3466 MHz, 3200 MHz, 2933 MHz, 2666 MHz, 2400 MHz, 2133 MHz"
+}
+********************************************************
+{
+  "ramSlotAmount": 2,
+  "maxRamSupport": "32GB",
+  "ramType": "DDR4",
+  "ramFrequencySpeed": "2933 MHz"
+}
+////////////////////////////////////////////////////////
+ProcessorCore
+{
+  "coreAmount": 6,
+  "coreName": "Ryzen"
+}
+********************************************************
+{
+  "coreAmount": 6,
+  "coreName": "Coffee Lake"
+}
+////////////////////////////////////////////////////////
+Stock
+{
+  "productAmount": 0
+}
+********************************************************
+{
+  "productAmount": 264
+}
+********************************************************
+{
+  "productAmount": 425
+}
+********************************************************
+{
+  "productAmount": 12
+}
+********************************************************
+{
+  "productAmount": 1264
+}
+********************************************************
+{
+  "productAmount": 45
+}
+********************************************************
+{
+  "productAmount": 10
+}
+********************************************************
+{
+  "productAmount": 20
+}
+********************************************************
+{
+  "productAmount": 28
+}
+********************************************************
+{
+  "productAmount": 18
+}
+********************************************************
+{
+  "productAmount": 100
+}
+********************************************************
+{
+  "productAmount": 20
+}
+********************************************************
+{
+  "productAmount": 79
+}
+********************************************************
+{
+  "productAmount": 45
+}
+********************************************************
+{
+  "productAmount": 10
+}
+********************************************************
+{
+  "productAmount": 6
+}
+********************************************************
+{
+  "productAmount": 20
+}
+********************************************************
+{
+  "productAmount": 133
+}

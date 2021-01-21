@@ -1,0 +1,30 @@
+<h4 *ngIf="products; else: noProduct">{{title}}</h4>
+
+<div *ngIf="products" class="mb-3">
+  <input class="form-control" id="productBrand" placeholder="Ürün Ara" [(ngModel)]="filterText">
+  <div *ngIf="filterText" class="form-text text-muted">Şu an <strong>{{filterText}}</strong> aradınız</div>
+</div>
+
+<div class="row">
+
+  <ng-template #noProduct>
+    <div class="alert alert-primary" role="alert">
+      Bu kategoride ürün yoktur!
+    </div>
+  </ng-template>
+
+  <div *ngFor="let product of products | ssdFilter: filterText"  class="card" style="width: 18rem;">
+
+    <div class="card-body">
+      <h5 class="card-title">SSD</h5>
+      <img class="card-img-top" src="https://cdn.dsmcdn.com/mnresize/415/525/ty35/product/media/images/20201220/21/40214734/13033904/1/1_org_zoom.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.capacity}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+
+  </div>
+
+</div>
+

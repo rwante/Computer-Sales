@@ -1,0 +1,120 @@
+<h4>Yeni Ürün Ekle</h4>
+
+<form #displayCardAddForm="ngForm" (ngSubmit)="add(displayCardAddForm)">
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Markası" #brand="ngModel" [(ngModel)]="model.brand"
+           class="form-control" name="brand" id="brand" required>
+    <div *ngIf="brand.invalid&&brand.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Ürün Fiyatı" #price="ngModel" [(ngModel)]="model.price"
+           class="form-control" name="price" id="price" required>
+    <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Üretici" #producer="ngModel" [(ngModel)]="model.producer"
+           class="form-control" name="producer" id="producer" required>
+    <div *ngIf="producer.invalid&&producer.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Max Çekirdek Hızı" #maxCoreSpeed="ngModel" [(ngModel)]="model.maxCoreSpeed"
+           class="form-control" name="maxCoreSpeed" id="maxCoreSpeed" required>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Cuda Sayısı" #cudaAmount="ngModel" [(ngModel)]="model.cudaAmount"
+           class="form-control" name="cudaAmount" id="cudaAmount" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="OpenGL" #openGL="ngModel" [(ngModel)]="model.openGL"
+           class="form-control" name="openGL" id="openGL" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="DirectX" #directX="ngModel" [(ngModel)]="model.directX"
+           class="form-control" name="directX" id="directX" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="HDMI" #hdmi="ngModel" [(ngModel)]="model.hdmi"
+           class="form-control" name="hdmi" id="hdmi" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="DirectX" #displayPort="ngModel" [(ngModel)]="model.displayPort"
+           class="form-control" name="displayPort" id="displayPort" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Max Çözünürlük" #maxResolution="ngModel" [(ngModel)]="model.maxResolution"
+           class="form-control" name="maxResolution" id="maxResolution" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Soğutucu Fan" #coolingFan="ngModel" [(ngModel)]="model.coolingFan"
+           class="form-control" name="coolingFan" id="coolingFan" required>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Kapladığı Slot Sayısı" #slot="ngModel" [(ngModel)]="model.slot"
+           class="form-control" name="slot" id="slot" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Kodu" #productCode="ngModel" [(ngModel)]="model.productCode"
+           class="form-control" name="productCode" id="productCode" required>
+    <div *ngIf="productCode.invalid&&productCode.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="sliSupport">SLI Desteği:</label>
+    <select class="form-control" #sliSupport="ngModel" [(ngModel)]="model.sliSupport" id="sliSupport" [ngModelOptions]="{standalone: true}">
+      <option [value]=true >Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="hdcpReady">HDCP Ready:</label>
+    <select class="form-control"  #hdcpReady="ngModel" [(ngModel)]="model.hdcpReady" id="hdcpReady" [ngModelOptions]="{standalone: true}">
+      <option [value]=true>Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="displayCardGPUId">GPU:</label>
+    <select class="form-control" #displayCardGPUId="ngModel" [(ngModel)]="model.displayCardGPUId" required
+            id="displayCardGPUId" name="displayCardGPUId">
+      <option *ngFor="let gpu of modelGpu" [value]="gpu.id">Seri/Model: {{gpu.gpuSerial}} / {{gpu.gpuModel}}</option>
+    </select>
+    <div *ngIf="displayCardGPUId.invalid&&displayCardGPUId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="displayCardMemoryId">Memory:</label>
+    <select class="form-control" #displayCardMemoryId="ngModel" [(ngModel)]="model.displayCardMemoryId" required
+            id="displayCardMemoryId" name="displayCardMemoryId">
+      <option *ngFor="let memory of modelMemory" [value]="memory.id">Tip/Hız/Kapasite/Arayüz: {{memory.memoryType}} / {{memory.memorySpeed}} / {{memory.memoryCapacity}} / {{memory.memoryInterface}}</option>
+    </select>
+    <div *ngIf="displayCardMemoryId.invalid&&displayCardMemoryId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="StockId">Stok Sayısı:</label>
+    <select class="form-control" #StockId="ngModel" [(ngModel)]="model.stockId" required
+            id="StockId" name="StockId">
+      <option *ngFor="let stock of modelStock" [value]="stock.id">{{stock.productAmount}}</option>
+    </select>
+    <div *ngIf="StockId.invalid&&StockId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ürün Ekle</button>
+</form>
+
+
+

@@ -1,0 +1,31 @@
+<h4 *ngIf="products; else: noProduct">{{title}}</h4>
+
+<div *ngIf="products" class="mb-3">
+  <input class="form-control" id="productBrand" placeholder="Ürün Ara" [(ngModel)]="filterText">
+  <div *ngIf="filterText" class="form-text text-muted">Şu an <strong>{{filterText}}</strong> aradınız</div>
+</div>
+
+<div class="row">
+
+  <ng-template #noProduct>
+    <div class="alert alert-primary" role="alert">
+      Bu kategoride ürün yoktur!
+    </div>
+  </ng-template>
+
+  <div *ngFor="let product of products | displayCardFilter: filterText"  class="card" style="width: 18rem;">
+
+    <div class="card-body">
+      <h5 class="card-title">Ekran Kartı</h5>
+      <img class="card-img-top" src="https://iasbh.tmgrup.com.tr/510c23/1200/627/0/0/786/410?u=https://isbh.tmgrup.com.tr/sbh/2020/08/31/ekran-karti-karsilastirma-ekran-karti-ozellikleri-karsilastirmasi-nasil-yapilir-1598858876951.jpeg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.producer}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+
+  </div>
+
+</div>
+
+

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://localhost:4200/home"><h2>DISTOPIA</h2></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://localhost:4200/home">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://localhost:4200/about-us">Hakkımızda</a>
+        </li>
+        <li ngbDropdown class="nav-item dropdown">
+          <button ngbDropdownToggle class="btn" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Ürün Ekle
+          </button>
+          <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/laptop/add">Laptop</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/computerCase/add">Bilgisayar Kasası</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/displayCard/add">Ekran Kartı</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/hdd/add">Hard Disk</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/mainboard/add">Ana Kart</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/monitor/add">Monitör</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/processor/add">İşlemci</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/ram/add">RAM</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="http://localhost:4200/ssd/add">SSD</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

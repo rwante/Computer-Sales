@@ -1,0 +1,66 @@
+<h4>Yeni Ürün Ekle</h4>
+
+<form #monitorAddForm="ngForm" (ngSubmit)="add(monitorAddForm)">
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Markası" #brand="ngModel" [(ngModel)]="model.brand"
+           class="form-control" name="brand" id="brand" required>
+    <div *ngIf="brand.invalid&&brand.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Ürün Fiyatı" #price="ngModel" [(ngModel)]="model.price"
+           class="form-control" name="price" id="price" required>
+    <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Yenileme Hızı" #refreshSpeed="ngModel" [(ngModel)]="model.refreshSpeed"
+           class="form-control" name="refreshSpeed" id="refreshSpeed" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Tepsi Süresi" #reactionTime="ngModel" [(ngModel)]="model.reactionTime"
+           class="form-control" name="reactionTime" id="reactionTime" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Çıkışlar" #outputs="ngModel" [(ngModel)]="model.outputs"
+           class="form-control" name="outputs" id="outputs" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Kodu" #productCode="ngModel" [(ngModel)]="model.productCode"
+           class="form-control" name="productCode" id="productCode" required>
+    <div *ngIf="productCode.invalid&&productCode.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="hdr">HDR:</label>
+    <select class="form-control" #hdr="ngModel" [(ngModel)]="model.hdr" id="hdr" [ngModelOptions]="{standalone: true}">
+      <option [value]=true >Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="monitorScreenId">Ekran:</label>
+    <select class="form-control" #monitorScreenId="ngModel" [(ngModel)]="model.monitorScreenId" required
+            id="monitorScreenId" name="monitorScreenId">
+      <option *ngFor="let screen of modelScreen" [value]="screen.id">Boyut/Çözünürlük: {{screen.screenSize}} / {{screen.resolution}}</option>
+    </select>
+    <div *ngIf="monitorScreenId.invalid&&monitorScreenId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="StockId">Stok Sayısı:</label>
+    <select class="form-control" #StockId="ngModel" [(ngModel)]="model.stockId" required
+            id="StockId" name="StockId">
+      <option *ngFor="let stock of modelStock" [value]="stock.id">{{stock.productAmount}}</option>
+    </select>
+    <div *ngIf="StockId.invalid&&StockId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ürün Ekle</button>
+</form>
+
+

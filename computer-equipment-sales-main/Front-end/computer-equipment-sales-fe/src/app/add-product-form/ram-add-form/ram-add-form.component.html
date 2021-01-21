@@ -1,0 +1,79 @@
+<h4>Yeni Ürün Ekle</h4>
+
+<form #ramAddForm="ngForm" (ngSubmit)="add(ramAddForm)">
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Markası" #brand="ngModel" [(ngModel)]="model.brand"
+           class="form-control" name="brand" id="brand" required>
+    <div *ngIf="brand.invalid&&brand.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Ürün Fiyatı" #price="ngModel" [(ngModel)]="model.price"
+           class="form-control" name="price" id="price" required>
+    <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="RAM Tipi" #type="ngModel" [(ngModel)]="model.type"
+           class="form-control" name="type" id="type" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Frekans Hızı" #frequencySpeed="ngModel" [(ngModel)]="model.frequencySpeed"
+           class="form-control" name="frequencySpeed" id="frequencySpeed" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Cas Gecikme" #casLatency="ngModel" [(ngModel)]="model.casLatency"
+           class="form-control" name="casLatency" id="casLatency" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Zamanlama" #_timing="ngModel" [(ngModel)]="model.timing"
+           class="form-control" name="_timing" id="_timing" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Voltaj" #voltage="ngModel" [(ngModel)]="model.voltage"
+           class="form-control" name="voltage" id="voltage" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Renk" #color="ngModel" [(ngModel)]="model.color"
+           class="form-control" name="color" id="color" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Kapasite" #capacity="ngModel" [(ngModel)]="model.capacity"
+           class="form-control" name="capacity" id="capacity" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Kanal Tipi" #channelType="ngModel" [(ngModel)]="model.channelType"
+           class="form-control" name="channelType" id="channelType" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="RAM Uyumluluğu" #ramCompatibility="ngModel" [(ngModel)]="model.ramCompatibility"
+           class="form-control" name="ramCompatibility" id="ramCompatibility" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Kodu" #productCode="ngModel" [(ngModel)]="model.productCode"
+           class="form-control" name="productCode" id="productCode" required>
+    <div *ngIf="productCode.invalid&&productCode.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="StockId">Stok Sayısı:</label>
+    <select class="form-control" #StockId="ngModel" [(ngModel)]="model.stockId" required
+            id="StockId" name="StockId">
+      <option *ngFor="let stock of modelStock" [value]="stock.id">{{stock.productAmount}}</option>
+    </select>
+    <div *ngIf="StockId.invalid&&StockId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ürün Ekle</button>
+</form>
+
+

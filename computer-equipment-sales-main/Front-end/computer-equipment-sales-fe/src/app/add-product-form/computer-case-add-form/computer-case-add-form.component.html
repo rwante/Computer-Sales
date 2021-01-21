@@ -1,0 +1,93 @@
+<h4>Yeni Ürün Ekle</h4>
+
+  <form #computerCaseAddForm="ngForm" (ngSubmit)="add(computerCaseAddForm)">
+    <div class="form-group">
+      <input type="text" placeholder="Ürün Markası" #brand="ngModel" [(ngModel)]="model.brand"
+             class="form-control" name="brand" id="brand" required>
+      <div *ngIf="brand.invalid&&brand.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+    </div>
+
+    <div class="form-group">
+      <input type="number" placeholder="Ürün Fiyatı" #price="ngModel" [(ngModel)]="model.price"
+             class="form-control" name="price" id="price" required>
+      <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Ürün Tipi" #caseType="ngModel" [(ngModel)]="model.caseType"
+             class="form-control" name="caseType" id="caseType" required>
+      <div *ngIf="caseType.invalid&&caseType.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Ürün Ön Çıkışları" #frontOutputs="ngModel" [(ngModel)]="model.frontOutputs"
+             class="form-control" name="frontOutputs" id="frontOutputs" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Ürün Ana Kart Desteği" #mainboardSupport="ngModel" [(ngModel)]="model.mainboardSupport"
+             class="form-control" name="mainboardSupport" id="mainboardSupport" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Ürün Malzemesi" #material="ngModel" [(ngModel)]="model.material"
+             class="form-control" name="material" id="material" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Ürün Boyutları" #size="ngModel" [(ngModel)]="model.size"
+             class="form-control" name="size" id="size" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Ürün Kodu" #productCode="ngModel" [(ngModel)]="model.productCode"
+             class="form-control" name="productCode" id="productCode" required>
+      <div *ngIf="productCode.invalid&&productCode.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="audio">Audio:</label>
+      <select class="form-control" #audio="ngModel" [(ngModel)]="model.audio" id="audio" [ngModelOptions]="{standalone: true}">
+        <option [value]=true >Var</option>
+        <option [value]=false>Yok</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="fan">Fan:</label>
+      <select class="form-control"  #fan="ngModel" [(ngModel)]="model.fan" id="fan" [ngModelOptions]="{standalone: true}">
+        <option [value]=true>Var</option>
+        <option [value]=false>Yok</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="transparentCase">Transparan:</label>
+      <select class="form-control"  #transparentCase="ngModel" [(ngModel)]="model.transparentCase" id="transparentCase" [ngModelOptions]="{standalone: true}">
+        <option [value]=true>Evet</option>
+        <option [value]=false>Hayır</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="computerCasePsuId">PSU:</label>
+      <select class="form-control" #computerCasePsuId="ngModel" [(ngModel)]="model.computerCasePsuId" required
+               id="computerCasePsuId" name="computerCasePsuId">
+        <option *ngFor="let psu of modelPsu" [value]="psu.id">Konum/Güç: {{psu.psuLocation}} / {{psu.psuPowerRating}}</option>
+      </select>
+      <div *ngIf="computerCasePsuId.invalid&&computerCasePsuId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="StockId">Stok Sayısı:</label>
+      <select class="form-control" #StockId="ngModel" [(ngModel)]="model.stockId" required
+              id="StockId" name="StockId">
+        <option *ngFor="let stock of modelStock" [value]="stock.id">{{stock.productAmount}}</option>
+      </select>
+      <div *ngIf="StockId.invalid&&StockId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ürün Ekle</button>
+  </form>
+
+

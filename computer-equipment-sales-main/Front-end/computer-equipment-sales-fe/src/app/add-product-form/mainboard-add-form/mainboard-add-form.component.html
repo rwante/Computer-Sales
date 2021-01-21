@@ -1,0 +1,76 @@
+<h4>Yeni Ürün Ekle</h4>
+
+<form #mainboardAddForm="ngForm" (ngSubmit)="add(mainboardAddForm)">
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Markası" #brand="ngModel" [(ngModel)]="model.brand"
+           class="form-control" name="brand" id="brand" required>
+    <div *ngIf="brand.invalid&&brand.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="number" placeholder="Ürün Fiyatı" #price="ngModel" [(ngModel)]="model.price"
+           class="form-control" name="price" id="price" required>
+    <div *ngIf="price.invalid&&price.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Soket" #socket="ngModel" [(ngModel)]="model.socket"
+           class="form-control" name="socket" id="socket" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Çipset" #chipset="ngModel" [(ngModel)]="model.chipset"
+           class="form-control" name="chipset" id="chipset" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Uyumlu İşlemciler" #compatibleProcessors="ngModel" [(ngModel)]="model.compatibleProcessors"
+           class="form-control" name="compatibleProcessors" id="compatibleProcessors" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ses Çipi" #soundChip="ngModel" [(ngModel)]="model.soundChip"
+           class="form-control" name="soundChip" id="soundChip" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ses Kanal Sayısı" #soundChannelAmount="ngModel" [(ngModel)]="model.soundChannelAmount"
+           class="form-control" name="soundChannelAmount" id="soundChannelAmount" required>
+  </div>
+
+  <div class="form-group">
+    <input type="text" placeholder="Ürün Kodu" #productCode="ngModel" [(ngModel)]="model.productCode"
+           class="form-control" name="productCode" id="productCode" required>
+    <div *ngIf="productCode.invalid&&productCode.dirty" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="hdmi">HDMI:</label>
+    <select class="form-control" #hdmi="ngModel" [(ngModel)]="model.hdmi" id="hdmi" [ngModelOptions]="{standalone: true}">
+      <option [value]=true >Var</option>
+      <option [value]=false>Yok</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="mainboardRAMId">RAM:</label>
+    <select class="form-control" #mainboardRAMId="ngModel" [(ngModel)]="model.mainboardRAMId" required
+            id="mainboardRAMId" name="mainboardRAMId">
+      <option *ngFor="let ram of modelRam" [value]="ram.id">Tür/Slot Sayısı/Max RAM Desteği/Frekans Hızı: {{ram.ramType}} / {{ram.ramSlotAmount}} / {{ram.maxRamSupport}} / {{ram.ramFrequencySpeed}}</option>
+    </select>
+    <div *ngIf="mainboardRAMId.invalid&&mainboardRAMId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="StockId">Stok Sayısı:</label>
+    <select class="form-control" #StockId="ngModel" [(ngModel)]="model.stockId" required
+            id="StockId" name="StockId">
+      <option *ngFor="let stock of modelStock" [value]="stock.id">{{stock.productAmount}}</option>
+    </select>
+    <div *ngIf="StockId.invalid&&StockId.touched" class="alert alert-danger">Bu alan zorunludur.</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ürün Ekle</button>
+</form>
+
+

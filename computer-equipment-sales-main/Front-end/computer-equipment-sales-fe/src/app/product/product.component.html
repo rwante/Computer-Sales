@@ -1,0 +1,112 @@
+<h4 *ngIf="productsComputerCase || productsDisplayCard || productsSsd || productsRam || productsProcessor ||
+productsMonitor || productsMainboard || productsLaptop || productsHdd; else: noProduct">{{title}}</h4>
+
+
+<div class="row">
+
+  <ng-template #noProduct>
+    <div class="alert alert-primary" role="alert">
+      Bu kategoride ürün yoktur!
+    </div>
+  </ng-template>
+
+  <div *ngFor="let product of productsComputerCase" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Bilgisayar Kasası</h5>
+      <img class="card-img-top" width="285" height="285" src="https://webdenal.s3.amazonaws.com/catalog2/1025767.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.caseType}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsDisplayCard" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Ekran Kartı</h5>
+      <img class="card-img-top" width="285" height="285" src="https://iasbh.tmgrup.com.tr/510c23/1200/627/0/0/786/410?u=https://isbh.tmgrup.com.tr/sbh/2020/08/31/ekran-karti-karsilastirma-ekran-karti-ozellikleri-karsilastirmasi-nasil-yapilir-1598858876951.jpeg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.producer}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsHdd" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Hard Disk</h5>
+      <img class="card-img-top" width="285" height="285" src="https://productimages.hepsiburada.net/s/2/375/9560543592498.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.accessType}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsLaptop" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Laptop</h5>
+      <img class="card-img-top" width="285" height="285" src="https://cdn.cimri.io/image/240x240/ixtech-thinbook-intel-atom-x5-z8350-32gb-hdd-2gb-ram-116-inc-laptop-notebook_240274525.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.operatingSystem}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsMainboard" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">AnaKart</h5>
+      <img class="card-img-top" width="285" height="285" src="https://www.itopya.com/picture500x0/msi-x570-a-pro-amd-x570-soket-am4-ddr4-4400mhz-o-c-m-2-pcie-4-0-anakart-0.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.chipset}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsMonitor" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Monitör</h5>
+      <img class="card-img-top" width="285" height="285" src="https://www.birnumara.com/image/data/resimler/dell-p2418ht-24-inc-6ms-hdmi-dokunmatik-monitor-17207.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.refreshSpeed}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsProcessor" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">İşlemci</h5>
+      <img class="card-img-top" width="285" height="285" src="https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81712213/mobile_786_587_png/INTEL-CORE-I9-9900KF-1151P-i%C5%9Flemci" width="18" height="600"/>
+      <h6 class="card-title">{{product.brand}} {{product.model}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsRam" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">RAM</h5>
+      <img class="card-img-top" width="285" height="285" src="https://cdn.akakce.com/corsair/corsair-vengeance-rgb-pro-16-gb-2x8-3200mhz-ddr4-cl16-cmw16gx4m2c3200c16-z.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.type}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+
+  <div *ngFor="let product of productsSsd" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">SSD</h5>
+      <img class="card-img-top" width="285" height="285" src="https://cdn.dsmcdn.com/mnresize/415/525/ty35/product/media/images/20201220/21/40214734/13033904/1/1_org_zoom.jpg" alt="card-img-cap" />
+      <h6 class="card-title">{{product.brand}} {{product.capacity}}</h6>
+      <p class="card-text">Fiyat: {{product.price | currency:"TRY":true:"1.2-2"}}</p>
+      <p class="card-text">Ürün Kodu: {{product.productCode}}</p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+</div>
+
